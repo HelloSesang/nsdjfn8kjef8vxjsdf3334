@@ -1,3 +1,10 @@
+/* TODO
+    1. Github에 performanceController-수정본.js 코드 복사해서 온라인에 배포
+    2. Modheader 크롬 확장 프로그램에서 performanceController.js 파일 요청 시 가로채기해서 수정된 코드를 가져오도록 설정
+        기존 URL:  https://ticket.melon.com/resource/frontEnd/dist/performanceController.js/*
+        변경 URL: https://hellosesang.github.io/nsdjfn8kjef8vxjsdf3334/89r3hbwejg23.js
+*/
+
 /*! jQuery v3.6.0 | (c) OpenJS Foundation and other contributors | jquery.org/license */
 !function(e, t) {
     "use strict";
@@ -17315,7 +17322,7 @@ function Captcha(useYn) {
 
 Captcha.prototype.use = false;
 Captcha.dataKey = 'chkcapt';
-Captcha.checkDomStorageMsg = '인증예매를 사용하시려면 브라우저 설정을 변경해주세요.\tInternet Explorer의 설정 -> 인터넷옵션 -> \'고급\' 탭 -> \'보안＇ 항목 중 "DOM 저장소 사용" 항목을 선택하여 주세요.';
+Captcha.checkDomStorageMsg = '인증예매를 사용하시려면 브라우저 설정을 변경해주세요.\tInternet Explorer의 설정 -> 인터넷옵션 -> \'고급\' 탭 -> \'보안＇ 항목 중 "DOM 저장소 사용" 항목을 선택하여 주세요.';
 
 /**
  * 인증예매(캡챠) 초기화
@@ -22897,9 +22904,7 @@ define('js/app/performance/service/reservationService', ["jquery", "underscore",
      */
     function _reservationNotice(message) {
         if (commonStringUtil.isNotEmpty(message)) {
-            if (!confirm(message)) {
-                return true;
-            }
+            console.log(message);
         }
 
         return false;
