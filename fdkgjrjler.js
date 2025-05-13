@@ -590,7 +590,7 @@
                         Object(y.a)() ? window.open("http://ticket.interpark.com/Tiki/TPEvent/TPCouponDown.asp?CouponCode=" + a, "", "width=575, height=400, left=400, top=300, scrolls=no") : (alert(S.a.LOGIN_FALSE_COUPON_DOWNLOAD),
                         Object(y.b)())
                     }
-                }, e.couponName, " ", "P" === e.discountType ? e.discountValue + "% 할인" : "M" === e.discountType ? Object(K.c)(e.discountValue) + "원 할인" : "", " 쿠폰받기")
+                }, e.couponName, " ", "P" === e.discountType ? e.discountValue + "% 할인" : "M" === e.discountType ? Object(K.c)(e.discountValue) + "원 할인" : "", " 쿠폰받기")
             }
             )))))
         };
@@ -2841,7 +2841,7 @@
                         Ne((function(e) {
                             return it(it({}, e), {}, {
                                 text: n + "남은시간 " + a,
-                                disabled: !0
+                                disabled: false
                             })
                         }
                         ))
