@@ -15725,7 +15725,7 @@ define('js/app/common/service/timerService', ["jquery", "underscore", "ticketCod
     var exports = {};
 
     var ticketTimer = null;
-    var interval = 1000;
+    var interval = 100;
     //1초
     var counterVal = 180;
 
@@ -15985,7 +15985,7 @@ define('js/app/common/service/timerService', ["jquery", "underscore", "ticketCod
 
                         var counterMilliseconds = tempDuration.distance;
 
-                        if (counterMilliseconds > 0) {
+                        if (counterMilliseconds > 1000) {
                             _counterTextFunction(tempDuration, openText, leftAddClassYN);
                         } else {
                             _successFunction(prodId, tempTicketTimer);
