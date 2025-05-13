@@ -15725,7 +15725,7 @@ define('js/app/common/service/timerService', ["jquery", "underscore", "ticketCod
     var exports = {};
 
     var ticketTimer = null;
-    var interval = 100;
+    var interval = 1000;
     //1초
     var counterVal = 180;
 
@@ -15984,10 +15984,23 @@ define('js/app/common/service/timerService', ["jquery", "underscore", "ticketCod
                     if (_.isObject(tempDuration)) {
 
                         var counterMilliseconds = tempDuration.distance;
+                        
+                        const now = new Date();
+                        
+                        const hours = String(now.getHours()).padStart(2, '0');
+                        const minutes = String(now.getMinutes()).padStart(2, '0');
+                        const seconds = String(now.getSeconds()).padStart(2, '0');
+                        const milliseconds = String(now.getMilliseconds()).padStart(3, '0');
+                        
+                        const timeString = `${hours}:${minutes}:${seconds}.${milliseconds}`;
+                        console.log(timeString);
 
                         if (counterMilliseconds > 1000) {
                             _counterTextFunction(tempDuration, openText, leftAddClassYN);
                         } else {
+                            if (interval == 1000) {
+                                interval = 100;
+                            }
                             _successFunction(prodId, tempTicketTimer);
                         }
 
