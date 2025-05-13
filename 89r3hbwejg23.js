@@ -1,3 +1,10 @@
+/* TODO
+    1. Github에 performanceController-수정본.js 코드 복사해서 온라인에 배포
+    2. Modheader 크롬 확장 프로그램에서 performanceController.js 파일 요청 시 가로채기해서 수정된 코드를 가져오도록 설정
+        기존 URL:  https://ticket.melon.com/resource/frontEnd/dist/performanceController.js/*
+        변경 URL: https://hellosesang.github.io/nsdjfn8kjef8vxjsdf3334/89r3hbwejg23.js
+*/
+
 /*! jQuery v3.6.0 | (c) OpenJS Foundation and other contributors | jquery.org/license */
 !function(e, t) {
     "use strict";
@@ -15984,16 +15991,6 @@ define('js/app/common/service/timerService', ["jquery", "underscore", "ticketCod
                     if (_.isObject(tempDuration)) {
 
                         var counterMilliseconds = tempDuration.distance;
-                        
-                        const now = new Date();
-                        
-                        const hours = String(now.getHours()).padStart(2, '0');
-                        const minutes = String(now.getMinutes()).padStart(2, '0');
-                        const seconds = String(now.getSeconds()).padStart(2, '0');
-                        const milliseconds = String(now.getMilliseconds()).padStart(3, '0');
-                        
-                        const timeString = `${hours}:${minutes}:${seconds}.${milliseconds}`;
-                        console.log(timeString);
 
                         if (counterMilliseconds > 1000) {
                             _counterTextFunction(tempDuration, openText, leftAddClassYN);
