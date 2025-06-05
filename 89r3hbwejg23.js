@@ -1,16 +1,3 @@
-/* TODO
-    1. Github에 performanceController-수정본.js 코드 복사해서 온라인에 배포
-    2. Modheader 크롬 확장 프로그램에서 performanceController.js 파일 요청 시 가로채기해서 수정된 코드를 가져오도록 설정
-        기존 URL:  https://ticket.melon.com/resource/frontEnd/dist/performanceController.js/*
-        변경 URL: https://hellosesang.github.io/nsdjfn8kjef8vxjsdf3334/89r3hbwejg23.js
-*/
-
-/* TODO: 작업내용
-    1. 예매하기 버튼 JS 코드로 클릭 가능하도록 변경
-    2. 예매하기 버튼 클릭 시 나올 수 있는 Confirm창 안뜨도록 변경
-    3. 티켓오픈 1초전부터 100ms 간격으로 예매창 열렸는지 확인토록 변경
-*/
-
 /*! jQuery v3.6.0 | (c) OpenJS Foundation and other contributors | jquery.org/license */
 !function(e, t) {
     "use strict";
